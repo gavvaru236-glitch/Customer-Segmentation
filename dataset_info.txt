@@ -1,16 +1,22 @@
-Dataset: Customer Personality Analysis
+CUSTOMER SEGMENTATION DATASET INFORMATION
 
-Records: 2240 customers
+Initial Dataset Shape: (2240 rows, 29 columns)
+Post-Preprocessing Shape: (2216 rows, 29 columns) - 24 rows dropped due to missing values in 'Income'.
 
-Features:
-- Income
-- Education
-- Marital Status
-- Purchase Behaviour
-- Customer Responses
+Key Features & Attributes Analyzed:
 
-Machine Learning Technique:
-- K-Means Clustering
+1. Customer Demographics:
+   - Education: Customer's qualification level (Categorical)
+   - Marital_Status: Customer's marital status (Categorical)
+   - Income: Customer's yearly household income (Continuous)
 
-Objective:
-Segment customers into groups based on purchasing behaviour for targeted marketing.
+2. Temporal Tracking:
+   - Dt_Customer: Date of customer's enrollment with the company (Engineered into 'day', 'month', and 'year' features)
+
+3. Redundant / Zero-Variance Features Dropped:
+   - Z_CostContact
+   - Z_Revenue
+   - Dt_Customer (Original string column)
+
+Target Processing Note:
+Categorical strings transformed to numeric inputs via Scikit-Learn LabelEncoder. Continuous variables scaled using StandardScaler to handle variance skewing before inputting to the t-SNE and K-Means pipeline.
