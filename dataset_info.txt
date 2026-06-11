@@ -1,0 +1,16 @@
+Dataset: Customer Personality Analysis
+
+Records: 2240 customers
+
+Features:
+- Income
+- Education
+- Marital Status
+- Purchase Behaviour
+- Customer Responses
+
+Machine Learning Technique:
+- K-Means Clustering
+
+Objective:
+Segment customers into groups based on purchasing behaviour for targeted marketing.
